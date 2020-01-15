@@ -21,21 +21,22 @@ img {
   height: auto;
 }
 
-.conteiner {
+.container {
   width: 900px;
   margin: 0 auto;
 }
 
 .nav {
   padding-top: 70px;
-  margin-bottom: 96px; 
+  padding-bottom: 96px;
 }
 
 .nav-list {
   margin: 0;
-  padding: 0 164px; 
+  padding: 0; 
   list-style: none;
   font-size: 0;
+  text-align: center;
 }
 
 .nav-list-item {
@@ -45,7 +46,7 @@ img {
 }
 
 .nav-list-item:not(:last-of-type) {
-  margin-right: 100px;
+  margin-right: 106px;
 }
 
 .nav-list-link {
@@ -62,7 +63,7 @@ img {
 .section {
   font-size: 0;
   line-height: 0;
-  margin-bottom: 50px; 
+ padding-bottom: 70px;
 }
 
 .article {
@@ -78,7 +79,7 @@ img {
 }
 
 .article:nth-last-of-type(-n + 2) {
-  margin-bottom: 0;
+  margin-bottom: 50px;
 }
 
 .article-image {
@@ -106,7 +107,7 @@ img {
 
 .btn {
   display: block;
-  margin: 0 auto 70px;
+  margin: 0 auto;
   padding: 17px 0;
   width: 164px;
   font-size: 20px;
