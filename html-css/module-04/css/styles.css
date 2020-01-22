@@ -87,8 +87,11 @@ img {
   color: #0f0101;
 }
 
-.menu-item:hover a {
-  color: #1abc9c;  
+.menu-item:hover a,
+.menu-link:focus
+ {
+  color: #1abc9c; 
+  outline: none; 
 }
 /* galery */
 .gallery {
