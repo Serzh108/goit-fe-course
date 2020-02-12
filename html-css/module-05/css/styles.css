@@ -1,3 +1,7 @@
+:root {
+  --main-color: rgba(26, 188, 126, 1);
+}
+
 html {
   box-sizing: border-box;
 }
@@ -52,7 +56,7 @@ img {
 }
 
 .logo::first-letter {
-  color: #1abc9c;
+  color: var(--main-color);
   font-weight: 900;
 }
 
@@ -88,22 +92,20 @@ img {
 
 .menu-item a:hover,
 .menu-item a:focus {
-  color: #1abc9c;
+  color: var(--main-color);
   outline: none;
 }
 /* slider */
 .slider {
   position: relative;
-  width: 100%;
-  height: 600px;
-  margin: 0 auto;
 }
 
 .container-arrow {
   position: absolute;
   height: inherit;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
 }
 
@@ -151,6 +153,7 @@ img {
   font-size: 60px;
   font-weight: 900;
   line-height: 82px;
+  text-transform: uppercase;
 }
 
 .slider-text {
@@ -158,6 +161,7 @@ img {
   font-size: 24px;
   font-weight: 300;
   line-height: 54px;
+  text-transform: uppercase;
 }
 
 .slider-arrow {
@@ -176,7 +180,7 @@ img {
 .slider-arrow:hover,
 .slider-arrow:focus {
   outline: none;
-  background-color: rgba(26, 188, 156, 1);
+  background-color: var(--main-color);
 }
 
 .arrow-prev {
@@ -211,7 +215,7 @@ img {
   width: 164px;
   height: 7px;
   margin: 33px auto 0;
-  background: #1abc9c;
+  background: var(--main-color);
 }
 
 .collection-list {
@@ -266,32 +270,35 @@ img {
 }
 
 .collection-price {
-  right: 0;
   width: 54px;
   padding: 4px 0;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.44);
 }
-
+.overlay {
+  position: relative;
+}
 .collection-overlay {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
-  height: 282px;
-  border: 10px solid transparent;
-  border-top: 11px solid transparent;
+  height: 100%;
+  border: 10px solid rgba(255, 255, 255, 0.55);
+  border-top: 11px solid rgba(255, 255, 255, 0.55);
   background-color: rgba(0, 0, 0, 0.55);
   background-clip: content-box;
   opacity: 0;
+  visibility: hidden;
 }
 
 .collection-item:hover .collection-overlay {
   opacity: 1;
+  visibility: visible;
 }
 
 .collection-item:hover .collection-info {
-  background-color: #1abc9c;
+  background-color: var(--main-color);
 }
 
 .overlay-content {
@@ -307,10 +314,20 @@ img {
 .overlay-item {
   display: inline-block;
   float: left;
+}
+
+.overlay-item:nth-of-type(-n + 2) {
+  margin-right: 8px;
+}
+
+.overlay-item:not(:last-of-type) {
+  margin-bottom: 7px;
+}
+
+.overlay-button {
+  display: block;
   width: 50px;
   height: 50px;
-  margin-right: 8px;
-  margin-bottom: 7px;
   padding: 0;
   border: 1px solid #fff;
   background-image: url(../img/1.png);
@@ -318,19 +335,18 @@ img {
   background-repeat: no-repeat;
   background-position: center;
 }
-.overlay-item:nth-of-type(2) {
+
+.overlay-item:nth-of-type(2) .overlay-button {
   background-image: url(../img/2.png);
 }
-.overlay-item:nth-of-type(3) {
-  margin-right: 0;
+
+.overlay-item:nth-of-type(3) .overlay-button {
   background-image: url(../img/3.png);
 }
 
-.overlay-item:last-of-type {
+.overlay-item:last-of-type .overlay-button {
   width: 166px;
-  margin: 0;
   padding-left: 42px;
-  padding-top: 8px;
   text-align: center;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 14px;
@@ -342,10 +358,10 @@ img {
   background-position: 12px center;
 }
 
-.overlay-item:hover,
-.overlay-item:focus {
-  border-color: rgba(26, 188, 156, 1);
-  background-color: rgba(26, 188, 156, 1);
+.overlay-item:hover .overlay-button,
+.overlay-item:focus .overlay-button {
+  border-color: var(--main-color);
+  background-color: var(--main-color);
   outline: none;
   cursor: pointer;
 }
@@ -362,9 +378,11 @@ img {
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 16px;
   line-height: 28px;
+  font-style: normal;
   color: #fff;
 }
 
 .footer-mark {
-  color: rgb(26, 188, 126);
+  text-decoration: none;
+  color: var(--main-color);
 }
