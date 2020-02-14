@@ -232,7 +232,7 @@ img {
 }
 
 .team-list-item:hover .item-overlay {
-  opacity: 0.9;
+  opacity: 1;
   visibility: visible;
 }
 
@@ -283,8 +283,8 @@ img {
   align-items: center;
   background-image: linear-gradient(
     to top,
-    rgb(252, 227, 138) 0%,
-    rgb(243, 129, 129) 100%
+    rgba(252, 227, 138, 0.9) 0%,
+    rgba(243, 129, 129, 0.9) 100%
   );
   opacity: 0;
   visibility: hidden;
