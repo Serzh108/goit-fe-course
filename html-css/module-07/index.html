@@ -72,7 +72,7 @@
             <ul class="container-input">
               <li class="input-list-item">
                 <input
-                  class="required"
+                  class="item-input"
                   type="text"
                   name="name"
                   placeholder="your name *"
@@ -81,7 +81,7 @@
               </li>
               <li class="input-list-item">
                 <input
-                  class="required"
+                  class="item-input"
                   type="email"
                   name="email"
                   placeholder="your email *"
@@ -89,11 +89,16 @@
                 />
               </li>
               <li class="input-list-item">
-                <input type="text" name="subject" placeholder="subject" />
+                <input
+                  class="item-input"
+                  type="text"
+                  name="subject"
+                  placeholder="subject"
+                />
               </li>
             </ul>
             <textarea
-              class="required"
+              class="textarea"
               name="message"
               placeholder="your message *"
               required
@@ -101,7 +106,7 @@
               rows="10"
             ></textarea>
           </div>
-          <button class="send-btn">send message</button>
+          <button type="submit" class="send-btn">send message</button>
         </form>
       </section>
       <!-- </div> -->
