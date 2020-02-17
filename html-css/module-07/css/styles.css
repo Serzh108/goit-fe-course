@@ -193,7 +193,7 @@ html {
   padding-bottom: 7.125rem;
   color: #fff;
   padding-top: 6.625rem;
-  background-color: #222;
+  background-color: var(--second-color);
   background-image: url(../img/Map-Image.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -231,8 +231,7 @@ html {
   line-height: 1rem;
   font-weight: 700;
   letter-spacing: -0.0219rem;
-  text-indent: 1.25rem;
-  /* padding-left: 20px; */
+  text-indent: 1.25rem; /* padding-left: 20px; */
   color: #bbb;
   text-transform: uppercase;
 }
