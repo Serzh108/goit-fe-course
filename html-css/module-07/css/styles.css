@@ -196,7 +196,7 @@ html {
   background-color: var(--second-color);
   background-image: url(../img/Map-Image.png);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right bottom 8px;
 }
 
 .contact-us .section-title {
