@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 @import url("fonts.css");
 :root {
   --main-color: rgba(149, 225, 211, 1);
@@ -6,12 +8,14 @@
 }
 
 html {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
+  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -27,6 +31,8 @@ img {
 }
 
 .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 0;
   margin: 0;
@@ -41,6 +47,20 @@ img {
 .header {
   padding-top: 24px;
   padding-bottom: 230px;
+  background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(rgba(252, 227, 138, 0.9)),
+      to(rgba(243, 129, 129, 0.9))
+    ),
+    url(../img/eagle.jpg);
+  background: -o-linear-gradient(
+      bottom,
+      rgba(252, 227, 138, 0.9) 0%,
+      rgba(243, 129, 129, 0.9) 100%
+    ),
+    url(../img/eagle.jpg);
   background: linear-gradient(
       0deg,
       rgba(252, 227, 138, 0.9) 0%,
@@ -53,8 +73,14 @@ img {
 }
 
 .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
   align-items: baseline;
   min-height: 66px;
   margin-bottom: 162px;
@@ -69,7 +95,10 @@ img {
 }
 
 .navigation__list {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -202,7 +231,9 @@ img {
 }
 
 .services__list {
+  -ms-flex-line-pack: distribute;
   align-content: space-around;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -281,6 +312,8 @@ img {
 }
 
 .team__list {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -299,6 +332,8 @@ img {
 
 .team__list-item:hover .item-overlay,
 .team__list-item:hover .team-item-image {
+  -webkit-transform: translate(-10px, -10px);
+  -ms-transform: translate(-10px, -10px);
   transform: translate(-10px, -10px);
 }
 .item-image-block {
@@ -306,7 +341,11 @@ img {
   background-color: var(--main-color);
 }
 .team__list-item-image {
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  -o-transition: transform 0.5s linear;
   transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
 }
 
 .team__list-item-name {
@@ -339,9 +378,27 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(rgba(252, 227, 138, 0.9)),
+    to(rgba(243, 129, 129, 0.9))
+  );
+  background-image: -o-linear-gradient(
+    bottom,
+    rgba(252, 227, 138, 0.9) 0%,
+    rgba(243, 129, 129, 0.9) 100%
+  );
   background-image: linear-gradient(
     to top,
     rgba(252, 227, 138, 0.9) 0%,
@@ -349,6 +406,8 @@ img {
   );
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
   transition: all 0.5s linear;
   z-index: 4;
 }
@@ -372,8 +431,14 @@ img {
 }
 
 .social-list__item-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 56px;
   height: 56px;
@@ -389,7 +454,11 @@ img {
 
 /* footer */
 .footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   height: 64px;
   padding: 10px 0;
@@ -408,6 +477,8 @@ img {
 }
 
 .footer__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 380px;
 }
@@ -423,6 +494,22 @@ img {
   font-weight: 300;
   border: 1px solid rgb(231, 231, 231);
   color: #333;
+}
+
+.footer__input::-webkit-input-placeholder {
+  color: rgba(204, 204, 204, 1);
+}
+
+.footer__input::-moz-placeholder {
+  color: rgba(204, 204, 204, 1);
+}
+
+.footer__input:-ms-input-placeholder {
+  color: rgba(204, 204, 204, 1);
+}
+
+.footer__input::-ms-input-placeholder {
+  color: rgba(204, 204, 204, 1);
 }
 
 .footer__input::placeholder {
@@ -455,13 +542,31 @@ input[type="radio"].visually-hidden {
 
   white-space: nowrap;
 
+  -webkit-clip-path: inset(100%);
+
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
-@media (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 2/1),
+  (min-resolution: 192dpi) {
   .header {
+    background: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        from(rgba(252, 227, 138, 0.9)),
+        to(rgba(243, 129, 129, 0.9))
+      ),
+      url(../img/eagle@2x.jpg);
+    background: -o-linear-gradient(
+        bottom,
+        rgba(252, 227, 138, 0.9) 0%,
+        rgba(243, 129, 129, 0.9) 100%
+      ),
+      url(../img/eagle@2x.jpg);
     background: linear-gradient(
         0deg,
         rgba(252, 227, 138, 0.9) 0%,
