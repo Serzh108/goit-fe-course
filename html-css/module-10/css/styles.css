@@ -331,7 +331,7 @@ img {
 }
 
 .team__list-item:hover .item-overlay,
-.team__list-item:hover .team-item-image {
+.team__list-item:hover .team__list-item-image {
   -webkit-transform: translate(-10px, -10px);
   -ms-transform: translate(-10px, -10px);
   transform: translate(-10px, -10px);
