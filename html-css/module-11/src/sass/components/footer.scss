@@ -1,0 +1,55 @@
+.footer {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    padding: 10px 0;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  &__description {
+    font-size: $main-font-size;
+    font-weight: 400;
+    line-height: 1.2;
+  
+    &-link {
+      text-decoration: none;
+      color: $second-color;
+    }
+  }
+
+  &__form {
+    display: flex;
+    width: 380px;
+  }
+
+  &__input {
+    padding: 0;
+    padding-left: 12px;
+    width: 230px;
+    font-family: $second-font-stack;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 300;
+    border: 1px solid rgb(231, 231, 231);
+    color: $second-text-color;
+  
+    &::placeholder {
+      color: rgba(204, 204, 204, 1);
+    }
+  }
+
+  &__btn {
+    padding: 0;
+    width: 150px;
+    font-size: $main-font-size;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white-color;
+    border: none;
+    background-color: $main-color;
+    cursor: pointer;
+  }
+}
